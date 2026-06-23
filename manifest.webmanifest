@@ -1,0 +1,10 @@
+{
+  "name": "MindMelt Beta v1",
+  "short_name": "MindMelt",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050913",
+  "theme_color": "#050913",
+  "description": "Single-entry life organizer beta for neurodivergent users.",
+  "icons": [{"src":"logo.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}

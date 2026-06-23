@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050913" />
+  <title>MindMelt Beta v1</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button" id="menuButton" aria-label="Open menu">☰</button>
+      <div class="mini-brand"><img src="logo.svg" alt=""/><span>MindMelt</span></div>
+      <button class="icon-button" id="settingsButton" aria-label="Open settings">⚙</button>
+    </header>
+
+    <main class="dashboard" id="dashboard">
+      <section class="hero" aria-label="MindMelt home">
+        <img class="hero-logo" src="logo.svg" alt="MindMelt logo" />
+        <h1>MindMelt</h1>
+        <p class="headline">Designed by Neurodivergents, for Neurodivergents.</p>
+        <p class="tagline">Capture. Organize. Focus.</p>
+      </section>
+
+      <form class="entry-card" id="entryForm" autocomplete="off">
+        <button class="add-button" type="submit" aria-label="Capture entry">＋</button>
+        <input id="entryInput" name="entry" type="text" placeholder="Type literally anything..." aria-label="Universal MindMelt entry" />
+        <button class="mic-button" type="button" id="voiceButton" aria-label="Voice input">🎙</button>
+      </form>
+
+      <section class="focus-card" id="focusArea" aria-live="polite">
+        <div class="focus-empty">
+          <div class="spark">✦</div>
+          <h2>Your Mind. Organized.</h2>
+          <p>Enter something above and I’ll take care of the rest.</p>
+          <div class="quick-examples">
+            <button data-example="Need cat food tomorrow">Need cat food tomorrow</button>
+            <button data-example="Do I have plans tonight?">Do I have plans tonight?</button>
+            <button data-example="Melt it: call Dan, buy cat food, schedule dentist, watch Dune Part Two">Melt it</button>
+          </div>
+        </div>
+      </section>
+
+      <nav class="dock" aria-label="MindMelt categories">
+        <button data-view="calendar" class="dock-item"><span class="dock-icon">📅</span><span class="dock-label">Calendar</span><span class="dock-count" id="count-calendar">0</span></button>
+        <button data-view="tasks" class="dock-item"><span class="dock-icon">✓</span><span class="dock-label">Tasks</span><span class="dock-count" id="count-tasks">0</span></button>
+        <button data-view="ideas" class="dock-item"><span class="dock-icon">💡</span><span class="dock-label">Ideas</span><span class="dock-count" id="count-ideas">0</span></button>
+        <button data-view="recommendations" class="dock-item"><span class="dock-icon">☆</span><span class="dock-label">Recs</span><span class="dock-count" id="count-recommendations">0</span></button>
+        <button data-view="notes" class="dock-item"><span class="dock-icon">📝</span><span class="dock-label">Notes</span><span class="dock-count" id="count-notes">0</span></button>
+        <button data-view="brainDump" class="dock-item"><span class="dock-icon">🧠</span><span class="dock-label">Dump</span><span class="dock-count alert" id="count-brainDump">0</span></button>
+      </nav>
+
+      <section class="ticker" aria-label="Reframe ticker">
+        <span>Reframe ticker</span>
+        <div class="ticker-window"><p id="tickerText">One tiny next step is enough.</p></div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="settingsDialog">
+    <form method="dialog" class="dialog-card">
+      <h2>MindMelt Settings</h2>
+      <p class="muted">Beta v1 stores everything locally in this browser. Export your data before clearing storage.</p>
+      <div class="dialog-actions">
+        <button type="button" id="exportButton">Export JSON</button>
+        <button type="button" id="importButton">Import JSON</button>
+        <button type="button" id="clearButton" class="danger">Clear demo data</button>
+        <button value="close">Close</button>
+      </div>
+      <input type="file" id="importFile" accept="application/json" hidden />
+    </form>
+  </dialog>
+
+  <script src="mindmelt-decision-engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 200" role="img" aria-label="MindMelt logo">
+  <defs>
+    <linearGradient id="left" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffae16"/><stop offset="0.55" stop-color="#ff5a12"/><stop offset="1" stop-color="#ff2438"/></linearGradient>
+    <linearGradient id="right" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#20c7ff"/><stop offset="0.52" stop-color="#168cff"/><stop offset="1" stop-color="#173dff"/></linearGradient>
+  </defs>
+  <path d="M25 180V22c0-8 9-12 15-7l90 74v43L55 70v122H37c-7 0-12-5-12-12Z" fill="url(#left)"/>
+  <path d="M93 118l37 31v43h-24c-7 0-13-6-13-13v-61Z" fill="url(#left)"/>
+  <path d="M235 180V22c0-8-9-12-15-7l-90 74v43l75-62v122h18c7 0 12-5 12-12Z" fill="url(#right)"/>
+  <path d="M167 118l-37 31v43h24c7 0 13-6 13-13v-61Z" fill="url(#right)"/>
+</svg>
